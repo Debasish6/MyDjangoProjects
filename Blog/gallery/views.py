@@ -1,5 +1,6 @@
-from django.shortcuts import render,get_object_or_404
+from django.shortcuts import render,get_object_or_404,redirect
 from .models import Product
+from .form import Productform
 
 # Create your views here.
 #All product view
@@ -9,12 +10,19 @@ def product_items(request):
 
 #Single Product View
 def single_product_item(request,pk):
-    product = Product.objects.all(pk=pk)
+    product = get_object_or_404(Product, pk=pk)
     return render(request,'index.html',{'product':product})
 
-# def edit_product(request,product_id):
-#     product = get_object_or_404(Product,pk=product_id)
+#Edit the product
+def edit_product(request,pk):
+    product = get_object_or_404(Product,pk=pk)
     
-#     if request.method == 'POST':
-#         form =
+    if request.method == 'POST':
+        form = Productform(request.POST, instance=product)
+        if form.is_valid():
+            form.save()
+            return redirect('product_list')
+    else:
+        form =Productform(instance=product)
+    return render(request,'edit.html',{'form':form,'product':product})        
     

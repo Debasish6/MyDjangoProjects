@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Blog Detail</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+
+<style>
+    .container-fluid {
+        background-image: url('{{product.image.url}}');
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+      }    
+</style>
+
+<body>
+    <div class="container-fluid">
+        <h3 class="text-center">Edit Blog Post</h3>
+            <form  method="post">
+                {%csrf_token%}
+                {{ form.as_p }}
+                <button class="btn btn-primary" type="submit">Save Changes</button><br>
+                <small>Last upadeted on {{product.update_at}}</small>
+        </form>
+    </div>
+</body>
+</html>

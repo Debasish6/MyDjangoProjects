@@ -25,6 +25,6 @@ class Product(models.Model):
         
         #if no. of words is greater than 50
         if len(words) > 50:
-            return ' '.join[:20]+'....'
+            return ' '.join(words[:30])+'....'
         else:
             return self.description
