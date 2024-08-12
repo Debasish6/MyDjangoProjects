@@ -24,5 +24,12 @@ def edit_product(request,pk):
             return redirect('product_list')
     else:
         form =Productform(instance=product)
-    return render(request,'edit.html',{'form':form,'product':product})        
+    return render(request,'edit.html',{'form':form,'product':product}) 
+
+def delete_product(request,pk):
+    product = get_object_or_404(Product,pk=pk)
     
+    if request.method == 'POST':
+        product.delete()
+        return redirect('product_list')       
+    return render(request, 'delete.html',{'product':product})

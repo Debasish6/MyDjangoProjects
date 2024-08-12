@@ -18,7 +18,7 @@
 <body>
     <div class="container-fluid">
         <h1 class="text-center">{{product.name}}-Blog</h1>
-        <div class="card">
+        <div class="col-md-5 card">
             <picture>
                 <img src="{{product.image.url}}" class="img-thumbnail" alt="{{ product.created_name }}" style="height: 450px; width: auto;">
             </picture>
@@ -28,6 +28,7 @@
                 <small>Created at {{product.create_at}}</small><br>
                 <small>Updated at {{product.update_at}}</small><br>
                 <a class="link-opacity-100-hover" href="{% url "edit_product" product.pk%}">Edit</a><br>
+                <a class="link-opacity-100-hover" href="{% url "delete_product" product.pk%}">Delete</a><br>
                 <a class="link-opacity-100-hover" href="{% url 'product_list' %}">Back to Blogs Home Page</a>
             </div>
         </div>
