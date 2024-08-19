@@ -23,7 +23,7 @@ def count_timer(request):
         }
     else:
         #If event object is not fetched then we store default value to a Dictionary object
-                time ={
+        time ={
             'name':"No Event",
             'hours':0,
             'minutes':0,

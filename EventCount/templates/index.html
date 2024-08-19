@@ -11,6 +11,7 @@
         <div class="card shadow-lg bg-warning ">
             <h1 class="text-center mt-3 ">Event Countdown Timer</h1><br>
             <div class="card-timer text-center shadow-lg p-4 mb-5 mt-5 m-auto bg-light rounded">
+                
                 <h2 class="card-timer-event fw-bold">{{time.name}}</h2>
                 <h3 class="card-timer-time mt-4">Time Remaining:</h2>
                 <div class="card-timer-countdown text-danger fw-bold fs-3" id="countdown">{{time.hours|stringformat:"02d" }}:{{time.minutes|stringformat:"02d" }}:{{time.seconds|stringformat:"02d" }}</div>
