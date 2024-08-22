@@ -118,7 +118,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
-    BASE_DIR,'img'
+    BASE_DIR,'static/img'
 ]
 
 # Default primary key field type
