@@ -1,0 +1,33 @@
+.card{
+    margin: 1rem 20%;
+    padding: 0.5rem 15%;
+    border: 5px groove black;
+    border-radius: 8px;
+    width: 500px;
+    height: 200px;
+    text-align:center;
+    
+}
+
+.card-body{
+    padding: 1rem;
+    height: auto;
+}
+.card-form{
+    background-color:gainsboro;
+    border-radius: 5px;
+}
+.card-url{
+    width: 18rem;
+    height: 2.5rem;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+.card-button{
+    background-color:royalblue;
+    height: 2.5rem;
+    border-radius: 7px;
+}
+.card-button:hover{
+    background-color: #24a0ed;
+}
