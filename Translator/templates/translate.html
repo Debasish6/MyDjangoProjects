@@ -1,23 +1,27 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Translation Application</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{%static 'css/style.css' %}">
 </head>
 <body>
     <div class="container">
         <div class="card">
             <h1 class="card-title">Translate Anything</h1>
-            <form action="post" class="card-form">
-                {%csrf_token%}
-                <input type="text" name="translate" class="card-text" required><br>
+            <form method="post" class="card-form">
+                {% csrf_token %}
+                <input type="text" name="translate" class="card-text" placeholder="What do you want to translate?" required><br><br>
+                {% if context %}
+                    <p>{{context}}</p><br>
+                {% endif %}
                 <select name="language" required>
                     <option value="Bengali">Bengali</option>
                     <option value="Hindi">Hindi</option>
-                </select><br>
-                <button type="submit">Translate</button>
+                </select><br><br>
+                <button type="submit" class="card-button">Translate</button>
             </form>
         </div>
     </div>
