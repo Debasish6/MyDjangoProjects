@@ -1,8 +1,9 @@
+
 .container{
     margin: 1rem 30%;
 }
 .card{
-    border: 2px solid blue;
+    border: 2px ridge blue;
     border-radius: 8px;
     padding: 0.5rem;
     padding-bottom: 1rem;
