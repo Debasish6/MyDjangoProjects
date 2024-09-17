@@ -2,4 +2,4 @@ from django.shortcuts import render,HttpResponse
 
 # Create your views here.
 def home(request):
-    return HttpResponse("Welcome to URL Shortner app.")
+    return render(request,'index.html')
