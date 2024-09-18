@@ -1,0 +1,7 @@
+---------------------------------18/09/24------------------------------------
+bit.ly is not working
+I am getting below error-
+        {'message': 'INVALID_ARG_LONG_URL', 'resource': 'bitlinks', 'description': 'The value provided is invalid.', 'errors': [{'field': 'long_url', 'error_code': 'invalid'}]}
+
+
+---------------------------------18/09/24------------------------------------

@@ -13,10 +13,11 @@
                 <h2>URL Shortner</h2>
             </div>
             <div class="card-body">
-                <form action="" method="post">
+                <form action="" method="POST">
+                    {% csrf_token %}
                     <label for="url">URL:</label>
                     <input type="search" id="url" placeholder="Enter URL"><br>
-                    <input type="button" name="submit" value="Get Short URL">
+                    <input type="submit" name="url" value="Get Short URL">
                 </form>
             </div>
         </div>
