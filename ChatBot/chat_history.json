@@ -1,0 +1,26 @@
+[
+    {
+        "role": "user",
+        "parts": [
+            "From now on, return the output as a JSON object that can be loaded in Python with the key as 'text'. For example, {\"text\": \"<output goes here>\"}"
+        ]
+    },
+    {
+        "role": "model",
+        "parts": [
+            "{\"text\":\"Sure, I can return the output as a regular JSON object with the key as `text`. Here is an example {\"text\":\"Your Output\"}."
+        ]
+    },
+    {
+        "role": "user",
+        "parts": [
+            "Give me the hsn code of sky tone "
+        ]
+    },
+    {
+        "role": "ai",
+        "parts": [
+            "\"The HSN code for 'sky tone' products are 480257, 48025790 and 48025590. \\n\""
+        ]
+    }
+]

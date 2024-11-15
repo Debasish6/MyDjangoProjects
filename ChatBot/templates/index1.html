@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBot</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Expand smERP Chat bot. Type 'bye' to exit.</h1><br>
+        <h1>ChatBot</h1> 
+        <div class="card">
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}
+                    <textarea rows="5" cols="60" class="card-text-input" name="prompt_text" type="text" placeholder="Enter Your Prompt"></textarea><br><br>
+                    <input type="submit" value="Get Response"><br><br>
+                </form>
+                {% if ai_data %}
+                    <h2>Response</h2>
+                    {{ ai_data }}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
