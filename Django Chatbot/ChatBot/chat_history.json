@@ -1,0 +1,36 @@
+[
+    {
+        "role": "user",
+        "parts": [
+            "From now on, return the output as JSON object that can be loaded in Python with the key as 'text'. For Example, {\"text\": \"<output goes here>\"}"
+        ]
+    },
+    {
+        "role": "model",
+        "parts": [
+            "{\"text\":\"Sure, I can return the output as a regular JSON object with the key as `text`. Here is an example {\"text\":\"Your Output\"}."
+        ]
+    },
+    {
+        "role": "user",
+        "content": "Can you give me total number of products the company has"
+    },
+    {
+        "role": "AI Assistant",
+        "content": {
+            "text": "(7478,)"
+        }
+    },
+    {
+        "role": "user",
+        "parts": [
+            "Can you give me total number of products the company has"
+        ]
+    },
+    {
+        "role": "ai",
+        "parts": [
+            "{\n    \"text\": \"(7478,)\"\n}"
+        ]
+    }
+]
