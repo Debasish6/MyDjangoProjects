@@ -12,6 +12,44 @@
         ]
     },
     {
+        "role": "AI Assistant",
+        "content": "Hi there! How can I help you today?  I'm here to answer your questions about eDominer Technologies, our Expand smERP product, or anything else you'd like to know.\n"
+    },
+    {
+        "role": "user",
+        "parts": [
+            "Hi"
+        ]
+    },
+    {
+        "role": "ai",
+        "parts": [
+            "Hi there! How can I help you today?  I'm here to answer your questions about eDominer Technologies, our Expand smERP product, or anything else you'd like to know.\n"
+        ]
+    },
+    {
+        "role": "user",
+        "content": "Tell me the Product Name whose Product back office code is 4COPI047A"
+    },
+    {
+        "role": "AI Assistant",
+        "content": {
+            "text": "('4CC Inject Copier',)"
+        }
+    },
+    {
+        "role": "user",
+        "parts": [
+            "Tell me the Product Name whose Product back office code is 4COPI047A"
+        ]
+    },
+    {
+        "role": "ai",
+        "parts": [
+            "{\n    \"text\": \"('4CC Inject Copier',)\"\n}"
+        ]
+    },
+    {
         "role": "user",
         "content": "Can you give me total number of products the company has"
     },
