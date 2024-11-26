@@ -4,6 +4,7 @@ from django.conf import settings
 # Assume settings.GEMINI_API_KEY is where the API key for Gemini is stored 
 gemini_api_key = settings.APIKEY
 system_instruction = settings.SYSTEM_INSTRUCTION
+genai.configure(api_key=gemini_api_key)
 
 generation_config = {
   "temperature": 0.5,
@@ -37,3 +38,9 @@ model = genai.GenerativeModel(
                     generation_config=generation_config,
                     system_instruction=system_instruction,
                 )
+
+
+def send_code_to_api(code):
+    response = model.generate_content(code) 
+    response.resolve() 
+    return response.text
